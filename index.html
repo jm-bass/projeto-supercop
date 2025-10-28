@@ -1,89 +1,288 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Supercop - Tipografia</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Supermercado Moderno - Landing Page</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style type="text/tailwindcss">
+        @layer base {
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+      }
+    }
 
-    <!-- Google Fonts: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#EF302A", // Red
+                        yellow: "#FBBD34",
+                        "yellow-light": "#FCCF37",
+                        orange: "#F69333",
+                        "background-light": "#FFFFFF", // White
+                        "background-dark": "#18181b", // A dark zinc
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem", // 8px
+                        lg: "1rem", // 16px
+                        xl: "1.5rem", // 24px
+                    }
+                },
+            },
+        };
+    </script>
 
-    <!-- Estilo personalizado -->
-    <link rel="stylesheet" href="style.css" />
+
 </head>
 
-<body>
-
-    <!-- Logomarca -->
-    <header class="bg-warning text-danger py-4 text-center">
-        <h1 class="logo">Supercop - Tipografia</h1>
-        <p class="lead">Apresentação visual da fonte no projeto</p>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased">
+    <header class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-12 h-12 rounded-full flex items-center justify-center text-white font-black text-lg transform hover:scale-110 transition-transform duration-300">
+                        <img src="./img/logo-supercop.png" alt="Logo Supercop">
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+                        href="#">Lojas</a>
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+                        href="#">Quem Somos</a>
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
+                        href="#">Encarte</a>
+                </nav>
+                <a class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    href="#">Fale conosco</a>
+            </div>
+        </div>
     </header>
-
-    <!-- Conteúdo principal -->
-    <main class="container my-5">
-
-        <section>
-            <h2 class="titulo">Fonte utilizada na logo do projeto: <strong>Open Sans</strong></h2>
-            <div id="logo-fonte">
-                <img src="img/logo-supercop.png" alt="Logo Supercop">
-                <p>
-                    A <strong>Open Sans</strong> foi projetada com ênfase vertical, formas abertas e uma aparência neutra, porém amigável. 
-                    Foi otimizada para interfaces impressas, web e mobile, e possui excelentes características de legibilidade em seus formatos de letras.
-                </p>
+    <main>
+        <section class="relative bg-yellow-light dark:bg-yellow-light/10 overflow-hidden">
+            <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-orange/50 dark:bg-orange/20 rounded-full blur-3xl">
+            </div>
+            <div class="absolute -top-20 -left-20 w-72 h-72 bg-primary/30 dark:bg-primary/20 rounded-full blur-3xl">
+            </div>
+            <div class="relative container mx-auto px-6 py-32 md:py-48 text-center">
+                <h1
+                    class="text-5xl md:text-8xl font-black text-gray-900 dark:text-white tracking-tighter leading-tight uppercase">
+                    Anúncios <span class="text-primary">Imperdíveis</span></h1>
+                <p class="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">As melhores promoções da
+                    semana estão aqui. Aproveite!</p>
             </div>
         </section>
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white">OFERTAS</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Selecionamos os melhores produtos com preços que
+                        você não vai acreditar.</p>
+                </div>
+                <div class="relative flex items-center">
+                    <button
+                        class="absolute -left-4 z-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all transform hover:scale-110">
+                        <span class="material-symbols-outlined text-gray-700 dark:text-gray-200">chevron_left</span>
+                    </button>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-xl p-6 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                            <div
+                                class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+                                <span class="text-gray-500 dark:text-gray-400">Produto</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-gray-900 dark:text-white">Nome do Produto</h3>
+                            <p class="text-primary font-black text-3xl mt-2">R$ 19,99</p>
+                            <button
+                                class="mt-4 bg-primary/10 text-primary font-bold px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">Comprar</button>
+                        </div>
 
-        <section>
-            <h2 class="titulo">Fonte utilizada nas páginas do projeto: <strong>Poppins</strong> </h2>
-            <p>
-                A fonte <strong>Poppins</strong> oferece uma ampla variedade de estilos, pesos e variações, o que a torna perfeita para diversos tipos de projetos. 
-                Essa versatilidade permite criar designs únicos e personalizados, adaptando-se às necessidades de cada projeto.
-                Além disso, a Poppins é uma fonte de fácil legibilidade, o que a torna adequada para uso em diferentes mídias, como impressos, websites e aplicativos.
-            </p>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-xl p-6 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                            <div
+                                class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+                                <span class="text-gray-500 dark:text-gray-400">Produto</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-gray-900 dark:text-white">Nome do Produto</h3>
+                            <p class="text-primary font-black text-3xl mt-2">R$ 19,99</p>
+                            <button
+                                class="mt-4 bg-primary/10 text-primary font-bold px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">Comprar</button>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-xl p-6 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 scale-105 border-primary">
+                            <div
+                                class="absolute top-0 right-0 m-4 bg-yellow text-black text-xs font-bold px-3 py-1 rounded-full uppercase">
+                                Popular</div>
+                            <div
+                                class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+                                <span class="text-gray-500 dark:text-gray-400">Produto</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-gray-900 dark:text-white">Nome do Produto</h3>
+                            <p class="text-primary font-black text-3xl mt-2">R$ 29,99</p>
+                            <button
+                                class="mt-4 bg-primary text-white font-bold px-6 py-2 rounded-full hover:bg-red-700 transition-colors duration-300">Comprar</button>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-gray-800/50 rounded-xl p-6 flex flex-col items-center text-center border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                            <div
+                                class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+                                <span class="text-gray-500 dark:text-gray-400">Produto</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-gray-900 dark:text-white">Nome do Produto</h3>
+                            <p class="text-primary font-black text-3xl mt-2">R$ 39,99</p>
+                            <button
+                                class="mt-4 bg-primary/10 text-primary font-bold px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">Comprar</button>
+                        </div>
+                    </div>
+                    <button
+                        class="absolute -right-4 z-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all transform hover:scale-110">
+                        <span class="material-symbols-outlined text-gray-700 dark:text-gray-200">chevron_right</span>
+                    </button>
+                </div>
+            </div>
         </section>
-
-        <!-- Seção de Títulos -->
-        <section class="mt-5">
-            <h2 class="titulo">Exemplos de Títulos</h2>
-            <h1>Heading H1 - Poppins</h1>
-            <h2>Heading H2 - Poppins</h2>
-            <h3>Heading H3 - Poppins</h3>
-            <h4>Heading H4 - Poppins</h4>
-            <h5>Heading H5 - Poppins</h5>
-            <h6>Heading H6 - Poppins</h6>
+        <section class="bg-yellow dark:bg-yellow-900/50 py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-4xl md:text-5xl font-black text-black dark:text-yellow-light mb-6">Super Dicas
+                        </h2>
+                        <div class="space-y-6">
+                            <div
+                                class="bg-white/50 dark:bg-black/20 p-6 rounded-xl flex items-start gap-4 transform hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="flex-shrink-0 bg-orange text-black w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">
+                                    1</div>
+                                <p class="text-black dark:text-gray-200 font-medium">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+                            </div>
+                            <div
+                                class="bg-white/50 dark:bg-black/20 p-6 rounded-xl flex items-start gap-4 transform hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="flex-shrink-0 bg-orange text-black w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">
+                                    2</div>
+                                <p class="text-black dark:text-gray-200 font-medium">Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                            </div>
+                            <div
+                                class="bg-white/50 dark:bg-black/20 p-6 rounded-xl flex items-start gap-4 transform hover:scale-105 transition-transform duration-300">
+                                <div
+                                    class="flex-shrink-0 bg-orange text-black w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">
+                                    3</div>
+                                <p class="text-black dark:text-gray-200 font-medium">Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full lg:w-1/2 h-80 lg:h-auto lg:self-stretch bg-gray-600 rounded-2xl flex items-center justify-center shadow-2xl">
+                        <span class="text-white text-2xl font-bold">FIGURA</span>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <!-- Parágrafos -->
-        <section class="mt-5">
-            <h2 class="titulo">Exemplo de Parágrafo</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, optio voluptatum odio aut sequi odit laudantium iusto officiis numquam incidunt.
-                Quis, recusandae magnam? Est asperiores iste quam ea nobis amet.
-            </p>
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                    class="bg-gray-100 dark:bg-gray-800/50 rounded-2xl p-10 md:p-12 text-center flex flex-col items-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="mb-4 bg-primary/10 text-primary p-3 rounded-full"><span
+                            class="material-symbols-outlined text-4xl">storefront</span></div>
+                    <h2 class="text-3xl font-black text-gray-900 dark:text-white mb-3">Nossas Lojas</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-md mx-auto">Encontre a loja mais próxima de
+                        você e venha nos visitar. Temos sempre as melhores ofertas.</p>
+                    <a class="mt-auto inline-block bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 hover:shadow-lg transition-all"
+                        href="#">Saiba Mais</a>
+                </div>
+                <div
+                    class="bg-gray-100 dark:bg-gray-800/50 rounded-2xl p-10 md:p-12 text-center flex flex-col items-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="mb-4 bg-yellow/20 text-yellow p-3 rounded-full"><span
+                            class="material-symbols-outlined text-4xl">celebration</span></div>
+                    <h2 class="text-3xl font-black text-gray-900 dark:text-white mb-3">Momentos</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-md mx-auto">Compartilhe seus momentos conosco.
+                        Veja fotos de nossos eventos, clientes e da nossa equipe.</p>
+                    <a class="mt-auto inline-block bg-yellow text-black px-8 py-3 rounded-full font-bold hover:bg-amber-400 hover:shadow-lg transition-all"
+                        href="#">Saiba Mais</a>
+                </div>
+            </div>
         </section>
-
-        <!-- Código -->
-        <section class="mt-5">
-            <h2 class="titulo">Exemplo de Código</h2>
-            <pre><code class="code-snippet">
-                body {
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 400;
-                }
-            </code></pre>
+        <section class="bg-orange/20 dark:bg-orange/10 py-20 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-2">Receba Nossas Ofertas
+                </h2>
+                <p class="text-gray-700 dark:text-gray-300 mb-8 max-w-lg mx-auto">Cadastre-se e seja o primeiro a saber
+                    das novidades e promoções exclusivas.</p>
+                <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+                    <input
+                        class="w-full px-5 py-4 rounded-full border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:ring-primary focus:border-primary text-black dark:text-white shadow-sm"
+                        placeholder="Seu nome" type="text" />
+                    <input
+                        class="w-full px-5 py-4 rounded-full border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 focus:ring-primary focus:border-primary text-black dark:text-white shadow-sm"
+                        placeholder="Seu e-mail" type="email" />
+                    <button
+                        class="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-colors whitespace-nowrap shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                        type="submit">Cadastrar</button>
+                </form>
+            </div>
         </section>
-
     </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-light text-center py-4">
-        <p class="mb-0">© 2025 Projeto Tipografia do Supercop</p>
+    <footer class="bg-gray-900 dark:bg-black text-gray-400">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-black text-2xl">
+                        S
+                    </div>
+                    <span class="font-bold text-2xl text-white">SUPERMERCADO</span>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a class="text-gray-400 hover:text-white transform hover:scale-125 transition-transform" href="#">
+                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 hover:text-white transform hover:scale-125 transition-transform" href="#">
+                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 hover:text-white transform hover:scale-125 transition-transform" href="#">
+                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd"
+                                d="M12 2.25c-2.43 0-2.784.01-3.808.06-1.064.049-1.791.218-2.427.465a4.902 4.902 0 00-1.772 1.153 4.902 4.902 0 00-1.153 1.772c-.247.636-.416 1.363-.465 2.427C2.013 9.216 2 9.569 2 12s.013 2.784.06 3.808c.049 1.064.218 1.791.465 2.427a4.902 4.902 0 001.153 1.772 4.902 4.902 0 001.772 1.153c.636.247 1.363.416 2.427.465C9.216 21.987 9.569 22 12 22s2.784-.013 3.808-.06c1.064-.049 1.791-.218 2.427-.465a4.902 4.902 0 001.772-1.153 4.902 4.902 0 001.153-1.772c.247-.636.416-1.363.465-2.427.048-1.024.06-1.378.06-3.808s-.012-2.784-.06-3.808c-.049-1.064-.218-1.791-.465-2.427a4.902 4.902 0 00-1.153-1.772A4.902 4.902 0 0018.235 2.775c-.636-.247-1.363-.416-2.427-.465C14.784 2.26 14.43 2.25 12 2.25zm0 2.7a.96.96 0 100 1.92.96.96 0 000-1.92zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700" />
+            <p class="text-center text-sm">© 2024 Your Company. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+<!-- JavaScript separado -->
+<script src="./js/main.js"></script>
 
 </body>
 
